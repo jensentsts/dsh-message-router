@@ -1,0 +1,25 @@
+- id: typert
+  name: '@deepseek-ai/dsh-typert-registry'
+- id: remote-access
+  name: '@deepseek-ai/dsh-api-remote-access'
+- id: gateway
+  name: '@deepseek-ai/dsh-api-gateway'
+- id: storage
+  name: '@deepseek-ai/dsh-storage'
+- id: sessions
+  name: '@deepseek-ai/dsh-session'
+- id: projections
+  name: '@deepseek-ai/dsh-session-projection'
+- id: agents
+  name: '@deepseek-ai/dsh-agent'
+- id: fixture-external
+  name: ./external.mjs
+- id: domain
+  name: '@deepseek-ai/dsh-storage-domain'
+  config:
+    backend: io-test
+- id: super-agent-io
+  name: ../../index.mjs
+  config:
+    enabled: true
+    sendEnabled: true

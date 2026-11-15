@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "title": "消息路由",
+    "description": "连接 DSH 会话与 QQ 等消息渠道，发现目的地并记录投递回执。"
+  },
+  "config": {
+    "enabled": "开启输入与冷会话预载；默认关闭，不授予任何额外权限。",
+    "sendEnabled": "允许外部投递；每个绑定还须单独允许发送。开启后可能发送待投递回复。",
+    "continuationEnabled": "允许已明确开启的绑定追加真实模型续回复请求；次数为硬上限，token/时间仅约束下一请求准入、不截断已开始请求，按实际计费。默认关闭。",
+    "maxPendingPerBinding": "每个绑定的输入排队上限",
+    "maxConcurrentSessions": "并发受理会话数",
+    "maxConsecutiveSteers": "连续 steering 次数上限（之后转为排队）",
+    "maxTextChars": "单次输入文字字符上限",
+    "maxBlocks": "单次输入内容块上限",
+    "maxRecords": "输入与投递记录上限（达到后拒绝新工作，不丢去重记录）",
+    "historyLimit": "每页历史条目上限",
+    "historyMaxBytes": "完整历史响应字节上限",
+    "admissionTimeoutMs": "冷会话解析与媒体受理超时（毫秒）",
+    "deliveryTimeoutMs": "传输投递超时（毫秒；超时结果记为未知）"
+  },
+  "monitor": {
+    "nav": "消息路由回执", "title": "消息路由回执", "readOnly": "查看接收、处理和投递的最新状态。",
+    "acceptedHint": "已受理只表示进入原生收件箱，不代表消息已提交、已持久化或已送达外部；各阶段分别显示。",
+    "refresh": "刷新", "loading": "加载中…", "unavailable": "当前组合未提供只读监测能力。", "failure": "监测查询失败，未发送任何工作。",
+    "gates": "当前开关", "gate.enabled": "输入", "gate.sendEnabled": "外部投递", "gate.continuationEnabled": "额外模型回复", "gateHint": "这些值仅供诊断，不构成发送授权。请在原生插件设置中修改开关。",
+    "on": "开", "off": "关", "binding": "绑定", "nextBindings": "更多绑定", "firstPage": "首页", "emptyBindings": "尚未登记任何绑定。",
+    "fromTo": "传输通道 ↔ 原生会话", "mode": "输入模式", "inputStates": "输入回执", "outputStates": "投递回执", "history": "历史", "nextPage": "下一页", "truncated": "本页按上限读取，可继续查看剩余记录。", "emptyHistory": "本页暂无回执。",
+    "filter.all": "全部回执", "filter.ingress": "输入", "filter.delivery": "投递", "filter.audit": "审计", "input": "输入", "output": "输出", "audit": "审计",
+    "endpoint": "端点", "replyTo": "回复目标", "sender": "外部发送者", "messageId": "原生消息 ID", "externalId": "外部消息 ID", "model": "实际模型", "media": "媒体", "excerpt": "文字摘要，部分内容已省略。", "committed": "消息已提交", "durable": "持久化已确认", "yes": "是", "no": "否",
+    "state.pending": "待处理", "state.admitting": "受理中", "state.accepted": "已受理", "state.failed": "失败", "state.unknown": "未知", "state.cancelled": "已取消", "state.sending": "投递中", "state.delivered": "已送达", "state.suppressed": "已阻止投递", "state.enabled": "已开启", "state.disabled": "已关闭", "state.ready": "已就绪", "state.prepared": "控制消息已准备", "state.requested": "额外模型请求", "state.stopped": "精确停止响应"
+  }
+}

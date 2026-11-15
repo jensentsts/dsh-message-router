@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "title": "Message Routing",
+    "description": "Connect DSH sessions to channels such as QQ, discover destinations and track delivery receipts."
+  },
+  "config": {
+    "enabled": "Enable input and cold-session preload. Disabled by default; this does not grant any additional permissions.",
+    "sendEnabled": "Allow external delivery. Each binding also requires its own send switch; enabling may deliver pending replies.",
+    "continuationEnabled": "Allow opt-in extra model requests. Request count is a hard ceiling; token/time budgets only govern admission of the next request. Costs remain actual. Disabled by default.",
+    "maxPendingPerBinding": "Maximum pending inputs per binding",
+    "maxConcurrentSessions": "Concurrent Session admissions",
+    "maxConsecutiveSteers": "Consecutive steering admissions before queueing",
+    "maxTextChars": "Maximum input text characters",
+    "maxBlocks": "Maximum input content blocks",
+    "maxRecords": "Maximum trace and delivery records (fail closed at capacity)",
+    "historyLimit": "Maximum history items per page",
+    "historyMaxBytes": "Maximum complete history response bytes",
+    "admissionTimeoutMs": "Cold resolution and attachment admission timeout (ms)",
+    "deliveryTimeoutMs": "Transport delivery timeout (ms; outcome becomes unknown)"
+  },
+  "monitor": {
+    "nav": "Message routing receipts", "title": "Message routing receipts", "readOnly": "View the latest status of received and delivered messages.",
+    "acceptedHint": "Accepted means native inbox admission, not message commit, durability or external delivery. Each has its own status.",
+    "refresh": "Refresh", "loading": "Loading…", "unavailable": "The read-only monitor is unavailable in this composition.", "failure": "The monitor query failed. No work was sent.",
+    "gates": "Current gates", "gate.enabled": "Input", "gate.sendEnabled": "External delivery", "gate.continuationEnabled": "Extra model replies", "gateHint": "These values are diagnostic, not permission to send. Change gates only through the native plugin settings.",
+    "on": "On", "off": "Off", "binding": "Binding", "nextBindings": "More bindings", "firstPage": "First page", "emptyBindings": "No bindings have been registered.",
+    "fromTo": "Transport ↔ native Session", "mode": "Input mode", "inputStates": "Input receipts", "outputStates": "Delivery receipts", "history": "History", "nextPage": "Next page", "truncated": "This page is bounded. Continue to read the remaining records.", "emptyHistory": "No receipts in this page.",
+    "filter.all": "All receipts", "filter.ingress": "Inputs", "filter.delivery": "Deliveries", "filter.audit": "Audit", "input": "Input", "output": "Output", "audit": "Audit",
+    "endpoint": "Endpoint", "replyTo": "Reply target", "sender": "External sender", "messageId": "Native message ID", "externalId": "External message ID", "model": "Actual model", "media": "Media", "excerpt": "Text excerpt; some content is omitted.", "committed": "Message committed", "durable": "Durability confirmed", "yes": "Yes", "no": "No",
+    "state.pending": "Pending", "state.admitting": "Admitting", "state.accepted": "Accepted", "state.failed": "Failed", "state.unknown": "Unknown", "state.cancelled": "Cancelled", "state.sending": "Sending", "state.delivered": "Delivered", "state.suppressed": "Suppressed", "state.enabled": "Enabled", "state.disabled": "Disabled", "state.ready": "Ready", "state.prepared": "Control prepared", "state.requested": "Extra model request", "state.stopped": "Exact stop response"
+  }
+}

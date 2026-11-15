@@ -1,0 +1,6 @@
+- insert:
+    - id: independent-super-agent-io
+      name: dsh-super-agent-io
+      config:
+        enabled: false
+        sendEnabled: false

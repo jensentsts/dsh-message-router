@@ -1,4 +1,4 @@
-/** Public, dependency-free contract for dsh-super-agent-io 0.0.1. */
+/** Public, dependency-free contract for dsh-super-agent-io 0.0.2. */
 export const SERVICE_KEY = 'superAgentIo'
 export const CONTRACT_VERSION = 1
 export const SOURCE_KIND = 'super-agent-io'

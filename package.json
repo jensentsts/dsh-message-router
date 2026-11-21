@@ -1,6 +1,6 @@
 {
   "name": "dsh-super-agent-io",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Message routing for DSH sessions and external channels with durable delivery receipts",
   "type": "module",
   "license": "MIT",
